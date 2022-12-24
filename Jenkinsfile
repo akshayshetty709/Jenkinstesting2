@@ -1,10 +1,12 @@
 pipeline { 
     agent { label 'slave2' } 
     stages {
-        stage ('Build') 
+        stage ('Deploy') 
         { 
              steps {
-                 sh "/home/ubuntu/ubuntu.sh"
+                 sh "sudo apt update -y"
+                 sh "sudo apt install awscli -y"
+                 sh "sudo apt install tsh"
              }
         }
     }           
