@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage ('Print') {
+        stage ('deploy') {
             steps {
-                echo "welcome to devops"
+                sh '/home/ubuntu/install.sh'
             }
         }
     }
