@@ -1,11 +1,15 @@
-pipeline {
-    agent any
-
+pipeline { 
+    agent { label 'slave2' } 
     stages {
-        stage ('deploy') {
-            steps {
-                sh '/home/ubuntu/install.sh'
-            }
+        stage ('Build') 
+        { 
+             steps {
+                 sh "/home/ubuntu/ubuntu.sh"
+             }
         }
-    }
-}
+        stage ('Deploy')
+        { 
+           
+        }
+    }           
+ }
