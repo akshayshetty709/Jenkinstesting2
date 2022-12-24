@@ -7,9 +7,5 @@ pipeline {
                  sh "/home/ubuntu/ubuntu.sh"
              }
         }
-        stage ('Deploy')
-        { 
-           
-        }
     }           
  }
