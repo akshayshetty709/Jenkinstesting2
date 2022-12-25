@@ -4,9 +4,8 @@ pipeline {
         stage ('Deploy')
         { 
              steps {
-             sh "sudo apt update -y"
-             sh "sudo apt install npm"
-             sh "npm --version"    
+             sh "sudo chmod +x ./package.sh"
+             sh "./package.sh"    
              }
         }
     }           
