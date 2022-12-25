@@ -6,10 +6,10 @@ pipeline {
              steps {
                 sh "set +e" 
                 sh "sudo apt update -y"
-                sh "sudo apt install npm"
-                sh "sudo apt install netcat"
-                sh "sudo apt install awscli"
-                sh "sudo apt install tsh" 
+                sh "sudo apt install npm -y"
+                sh "sudo apt install netcat -y"
+                sh "sudo apt install awscli -y"
+                sh "sudo apt install tsh -y" 
              }
         }
     }           
