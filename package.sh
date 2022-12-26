@@ -10,6 +10,7 @@ source /etc/os-release
 echo "deb [signed-by=/usr/share/keyrings/teleport-archive-keyring.asc] \
 https://apt.releases.teleport.dev/${ID?} ${VERSION_CODENAME?} stable/v11" \ | sudo tee /etc/apt/sources.list.d/teleport.list > /dev/null
 sudo apt update -y
-sudo apt -y install tsh
+sudo apt  install teleport -y
+sudo apt install tsh -y
 }
 install
